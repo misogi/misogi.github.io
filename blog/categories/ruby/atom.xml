@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | My Octopress Blog]]></title>
   <link href="http://misogi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://misogi.github.io/"/>
-  <updated>2013-07-10T17:22:29+09:00</updated>
+  <updated>2013-07-10T17:35:00+09:00</updated>
   <id>http://misogi.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -69,7 +69,7 @@ mkdir -p public
 <p>私のリポジトリを答える。</p>
 
 <p><code>
-Repository url: git@github.com:misogi/misogi.github.com.git
+Repository url: git@github.com:misogi/misogi.github.io.git
 </code></p>
 
 <p>するとデプロイ設定までやってくれる。
