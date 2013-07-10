@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。 octopressインストール http://octopress.org/docs/setup/ 1
+2
+% git clone git://github.com/imathis/octopress &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://misogi.github.io">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:misogi.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/">My Blog Update From Jekyll-bootstrap to Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-10T16:12:00+09:00" pubdate data-updated="true">Jul 10<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。</p>
+
+<ul>
+<li>octopressインストール</li>
+</ul>
+
+
+<p><a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>% cd octopress</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% rake install
+</span><span class='line'>## Copying classic theme into ./source and ./sass
+</span><span class='line'>mkdir -p source
+</span><span class='line'>cp -r .themes/classic/source/. source
+</span><span class='line'>mkdir -p sass
+</span><span class='line'>cp -r .themes/classic/sass/. sass
+</span><span class='line'>mkdir -p source/_posts
+</span><span class='line'>mkdir -p public</span></code></pre></td></tr></table></div></figure>
+
+
+<p>rake install で何か初期設定をやってくれているのでしょう。ディレクトリ作成してくれています。</p>
+
+<p>cd octopress した時点で、rvm ちゃんに怒られる。
+きっと octopress のせいではなくて、ruby 使わなくなって久しい私に rvm が怒っている。
+この件は別エントリ。</p>
+
+<p>ともあれ、 rvm でも rbenv でもバージョン指定がすでに済んでいるようである。</p>
+
+<ul>
+<li>デプロイ設定</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>すると、github のリポジトリを問われる。</p>
+
+<p>私のリポジトリを答える。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Repository url: git@github.com:misogi/misogi.github.com.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p>するとデプロイ設定までやってくれる。
+この時点で、リモートの設定とブランチの設定が書き換わります。</p>
+
+<p>リモートは2つになり、</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% git remote -v
+</span><span class='line'>octopress git://github.com/imathis/octopress.git (fetch)
+</span><span class='line'>octopress git://github.com/imathis/octopress.git (push)
+</span><span class='line'>origin git@github.com:misogi/misogi.github.com.git (fetch)
+</span><span class='line'>origin git@github.com:misogi/misogi.github.com.git (push)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ブランチも2つになります。
+が、ルートディレクトリが source ブランチ、_deploy ディレクトリが master となります。
+不思議な運用に見えますが、よくあるのでしょうか。</p>
+
+<ul>
+<li>ブログを書いてデプロイ</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% rake new_post</span></code></pre></td></tr></table></div></figure>
+
+
+<p>で、 source/<em>posts 以下に新しいポストができる。
+jekyll-bootstrap だと、 </em>posts 以下だったので、なんとか移植せねばならない。
+今までのバージョンがあるため、どうしたものか。
+octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した方が早かったかもしれない。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% rake generate
+</span><span class='line'>% rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>generate で public ディレクトリ以下のHTMLファイルを再構築し、
+deploy で master ブランチをpushする。
+それらをいっぺんにやる gen_deploy</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/20/ubuntu1210/">デスクトップPCに Ubuntu 12.10 インストール</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-20T00:00:00+09:00" pubdate data-updated="true">Oct 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>目標</h2>
+
+<p>Ubuntu 12.10 をデスクトップPCにインストールする.</p>
+
+<p>windowsとのデュアルブートとする</p>
+
+<p>Geforce 560 Ti が入っているので nvidia のドライバは入れたい</p>
+
+<ul>
+<li>hda win7</li>
+<li>hdc ubuntu
+
+<ul>
+<li>hdc1 /</li>
+<li>hdc2 swap</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>インストーラ</h2>
+
+<p>インストールの種類</p>
+
+<ul>
+<li><p>windows7といっしょにインストール
+論外</p></li>
+<li><p>windowsと別にインストール
+これをやったが、windowsと同じディスクしか選べない</p></li>
+<li><p>マニュアル
+  で、これ</p></li>
+</ul>
+
+
+<p>hdc にパーティション作成するのだが、ここで毎回落ちる。ファック</p>
+
+<p>なので、LiveCDでお試し起動し、gpartdであらかじめ hdc1,hdc2 を作成、ほいでインストール</p>
+
+<h2>nvidiaドライバインストール</h2>
+
+<ol>
+<li><p>システム設定 &ndash;> ソフトウェアソース &ndash;> 追加のドライバーから nvidia-current を選ぶ
+が、Unityが出なくなった。死ね。</p></li>
+<li><p><a href="http://www.techlw.com/2012/08/install-nvidia-unix-driver-30432-on.html">Install Nvidia Unix Driver 304.32 On Ubuntu 12.10/12.04/Linux Mint 13 ~ Technology Linux and Windows</a> を試す。が、解像度640になった死ね。</p></li>
+<li><p><a href="http://askubuntu.com/questions/202677/nvidia-driver-doesnt-work-in-12-10">xorg &ndash; Nvidia driver doesn&rsquo;t work in 12.10 &ndash; Ask Ubuntu</a> いわく、linux-headers と linux-source いれろとのことなので入れる。無事起動。</p></li>
+</ol>
+
+
+<h2>ほかソフトウェアインストール</h2>
+
+<pre><code>sudo apt-get install aptitude fonts-inconsolata ttf-inconsolata git terminator curl zsh
+</code></pre>
+
+<p>apt-get で ruby 入れると 1.9.1 ちゃんが入るので rvm</p>
+
+<p><a href="https://rvm.io/rvm/install/">rvm</a></p>
+
+<p><a href="http://www.technoreply.com/how-to-install-sublime-text-2-on-ubuntu-12-04-unity/">How to install Sublime Text 2 on Ubuntu 12.04 (Unity) | Technoreply</a>
+を参考に、sublime textをUnityのメニューに突っ込む</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/16/new-post/">Install Fedora 18 and Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-16T00:00:00+09:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+
+<h2>Install NVidia Driver</h2>
+
+<p>install rpmfusion</p>
+
+<p>Don&rsquo;t choice rpmfusion-free-release-stable.</p>
+
+<p>You have to install <em>rpmfusion-free-release-branched</em></p>
+
+<pre><code>sudo yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-branched.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-branched.noarch.rpm
+sudo yum install akmod-nvidia
+</code></pre>
+
+<p>disable nouveau</p>
+
+<p><a href="http://goo.gl/TjWZ8">Fedora 17 nVidia Drivers Install Guide (disable nouveau driver)</a></p>
+
+<pre><code>## Backup old initramfs nouveau image ##
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)- nouveau.img
+
+## Create new initramfs image ##
+dracut /boot/initramfs-$(uname -r).img $(uname -r)
+</code></pre>
+
+<h2>Install Google Chrome</h2>
+
+<pre><code>sudo yum install wget lsb
+sudo rpm -Uvh google-chrome-stable_current_x86_64.rpm
+cd /usr/lib64
+sudo ln -s libudev.so.1 libudev.so.0
+</code></pre>
+
+<h2>Install Ricty</h2>
+
+<pre><code>git clone https://github.com/yascentur/Ricty.git
+sudo yum install fontforge
+</code></pre>
+
+<p>Download Inconsolata.otf and Migu 1M</p>
+
+<p><a href="http://goo.gl/OwKwJ">Inconsolata</a></p>
+
+<p><a href="http://goo.gl/8rBlT">ダウンロード : M+とIPAの合成フォント</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>./ricty_generator.sh auto</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Ibusの設定</h2>
+
+<p>Anthyはデフォルトで Ctrl+J がOn/Offになっている。</p>
+
+<p>Anthyの設定で、キーマップをjaにしたのち、Zenkaku_Hankaku を割り当てるなどするとよい</p>
+
+<h2>Install git and Setup github</h2>
+
+<pre><code>sudo yum install git
+ssh-keygen -t rsa -C "xxxx@xxxx"
+sudo yum install xclip
+xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+git clone git@github.com:misogi/misogi.github.com.git
+git config --global user.email "xxxx@xxxx"
+git config --global user.name "misogi"
+git config --global color.ui true
+</code></pre>
+
+<h2>Install ruby</h2>
+
+<pre><code>sudo yum install ruby ruby-devel
+gem install rake jekyll
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/13/cannot-find-lz-on-gem-install/">&#8220;Cannot Find -lz&#8221; on Gem Install</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-13T00:00:00+09:00" pubdate data-updated="true">Oct 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+
+<p>kyotocabinet-ruby のようなgemファイルインストール時に</p>
+
+<pre><code>checking for kccommon.h... *** extconf.rb failed ***
+</code></pre>
+
+<p>みたいに出る。</p>
+
+<p>mkmf.logを見ると、</p>
+
+<pre><code>/usr/bin/ld: cannot find -lz
+</code></pre>
+
+<p>とのこと。
+zilbのライブラリがないようなので</p>
+
+<p>fedora等では</p>
+
+<pre><code>sudo yum install zlib-devel
+</code></pre>
+
+<p>ubuntu等では</p>
+
+<pre><code>sudo aptitude install zlib1g-dev
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/12/groonga-mecab/">Groonga、Mecabインストール</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-12T00:00:00+09:00" pubdate data-updated="true">Oct 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+
+<ul>
+<li>インストール</li>
+</ul>
+
+
+<p>ubuntu 12.04</p>
+
+<p><a href="http://groonga.org/ja/docs/install/ubuntu.html#lts-precise-pangolin">2.4. Ubuntu — groonga v2.0.7ドキュメント</a></p>
+
+<ul>
+<li>mecab インストール</li>
+</ul>
+
+
+<p><a href="http://d.hatena.ne.jp/kaorumori/20071227/1198764638">Mecabのインストールと辞書のUTF-8化 &ndash; 森薫の日記</a></p>
+
+<ul>
+<li>テーブル作成</li>
+</ul>
+
+
+<p>チュートリアルを参考に。</p>
+
+<p><a href="http://groonga.org/ja/docs/tutorial/introduction.html">4.1. 基本的な操作 — groonga v2.0.7ドキュメント</a></p>
+
+<p>テーブル・カラム作成</p>
+
+<pre><code>table_create --name Site --flags TABLE_HASH_KEY --key_type ShortText
+column_create --table Site --name title --type ShortText
+</code></pre>
+
+<p>load.txtを用意</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="err">load</span> <span class="err">--table</span> <span class="err">Post</span>
+</span><span class='line'><span class="p">[</span>
+</span><span class='line'><span class="p">{</span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="s2">&quot;バージョン管理&quot;</span><span class="p">},</span>
+</span><span class='line'><span class="p">{</span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="s2">&quot;常にそれを使い続けることでしょう&quot;</span><span class="p">},</span>
+</span><span class='line'><span class="p">{</span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="s2">&quot;それぞれ特徴があり&quot;</span><span class="p">},</span>
+</span><span class='line'><span class="p">{</span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="s2">&quot;現状の開発スタイル&quot;</span><span class="p">}</span>
+</span><span class='line'><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>load.txtを使ってデータ投入</p>
+
+<pre><code>$ groonga data.db &lt; load.txt
+</code></pre>
+
+<p>辞書テーブル作成</p>
+
+<pre><code>辞書テーブル作成
+table_create --name Terms --flags TABLE_PAT_KEY|KEY_NORMALIZE --key_type ShortText --default_tokenizer TokenMecab
+辞書テーブルにカラム作成
+column_create --table Terms --name blog_title --flags COLUMN_INDEX|WITH_POSITION --type Site --source title
+辞書テーブルを確認
+select --table Terms
+テーブルを検索
+select --table Site --query title:@特徴
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/10/new-post/">Github Pages + Jekyll でブログを作ろう</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-10T00:00:00+09:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+
+<h2>Jekyll?</h2>
+
+<p>ブログのフレームワークです。 Rubyのgemとして提供されています。 データベースを使用せず、テキストファイルもしくはマークダウン記法で記事を作成します</p>
+
+<h3>Jekyll-Bootstrap?</h3>
+
+<p>設置が簡単にできます。 github pages は、Jekyllにネイティブで対応してるので、らくちんです。</p>
+
+<h2>ゼロから作ろう Jekyll でブログ</h2>
+
+<p><a href="http://jekyllbootstrap.com/">Jekyll Bootstrap</a> を参考に。</p>
+
+<h3>リポジトリを作る</h3>
+
+<p>github でログインし、リポジトリを作成します。 その時、リポジトリ名を</p>
+
+<p> #{githubのユーザー名}.github.com</p>
+
+<p>とする必要があります。 私だと、 misogi.github.com ですね。</p>
+
+<h3>リポジトリを作り、ブログをセットアップします</h3>
+
+<p>Jekyll-Bootstrap 一式をとってくる &ndash;> 自分のリポジトリに突っ込む</p>
+
+<p> (この手順だけであれば windows + github for windows だけでも可能です)</p>
+
+<pre><code># bootstrapのファイル一式をリポジトリから取得し、ローカルマシンに置きます
+$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
+# ディレクトリを移動します
+$ cd USERNAME.github.com
+# リポジトリのリモートURLを、自分のリポジトリに変えます
+$ git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
+# PUSHします
+$ git push origin master
+</code></pre>
+
+<h2>Jekyll をローカルにインストール</h2>
+
+<p>いろいろできるようになります。</p>
+
+<pre><code>gem install jekyll
+</code></pre>
+
+<p>gemインストール時に、コンパイルが入るので、 fedora などの場合は、あらかじめ、</p>
+
+<pre><code>sudo yum install ruby-devel
+</code></pre>
+
+<p>が要ります。</p>
+
+<p>windowsでは Devkit があればgemインストール可能かもしれません（未確認）</p>
+
+<h3>新しくpostする</h3>
+
+<pre><code>$ rake post title="Hello World"
+</code></pre>
+
+<p>この手順なら、既存のファイルを上書きすることもありませんし、テンプレートになってるので編集が簡単です。</p>
+
+<p>posts 以下に、YYYY-MM-DD-title.md というファイルができるので、それを編集して、記事の内容を書きます。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/06/birth-blog/">ブログはじめてみる</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-06T00:00:00+09:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>さくらにブログをセットアップするのがじゃまくさくなったのでこちらに</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/">My Blog Update From Jekyll-bootstrap to Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/20/ubuntu1210/">デスクトップPCに Ubuntu 12.10 インストール</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/16/new-post/">Install Fedora 18 and Ruby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/13/cannot-find-lz-on-gem-install/">&#8220;Cannot Find -lz&#8221; on Gem Install</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/12/groonga-mecab/">Groonga、Mecabインストール</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
