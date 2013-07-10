@@ -9,9 +9,9 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。 octopressインストール http://octopress.org/docs/setup/ 1
+  <meta name="description" content="久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。 ので、octopress に切り替えようと思ってやってみた。 octopressインストール http://octopress.org/docs/setup/ 1
 2
-% git clone git://github.com/imathis/octopress &hellip;">
+% git clone git &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,8 @@
 
   <div class="entry-content"><p>久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。</p>
 
+<p>ので、octopress に切り替えようと思ってやってみた。</p>
+
 <ul>
 <li>octopressインストール</li>
 </ul>
@@ -173,9 +175,11 @@
 </span><span class='line'>origin git@github.com:misogi/misogi.github.com.git (push)</span></code></pre></td></tr></table></div></figure>
 
 
-<p>ブランチも2つになります。
-が、ルートディレクトリが source ブランチ、_deploy ディレクトリが master となります。
-不思議な運用に見えますが、よくあるのでしょうか。</p>
+<p>ブランチも2つになります。</p>
+
+<p>が、ルートディレクトリが source ブランチ、_deploy ディレクトリが master となります。</p>
+
+<p>不思議な運用に見えますが、よくあるのでしょうか。</p>
 
 <ul>
 <li>ブログを書いてデプロイ</li>
@@ -186,10 +190,13 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>% rake new_post</span></code></pre></td></tr></table></div></figure>
 
 
-<p>で、 source/<strong>posts 以下に新しいポストができる。
-jekyll-bootstrap だと、 </strong>posts 以下だったので、なんとか移植せねばならない。
-jekyll-bootstrapを元にした今までのバージョンがあるため、どうしたものか。
-octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した。</p>
+<p>で、 source/_posts 以下に新しいポストができる。</p>
+
+<p>jekyll-bootstrap だと、 _posts 以下だったので、なんとか移植せねばならない。</p>
+
+<p>jekyll-bootstrapを元にした今までのバージョンがあるため、どうしたものか。</p>
+
+<p>octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

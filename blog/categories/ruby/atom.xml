@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | My Octopress Blog]]></title>
   <link href="http://misogi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://misogi.github.io/"/>
-  <updated>2013-07-10T17:15:27+09:00</updated>
+  <updated>2013-07-10T17:19:40+09:00</updated>
   <id>http://misogi.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -19,6 +19,8 @@
     <updated>2013-07-10T16:12:00+09:00</updated>
     <id>http://misogi.github.io/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress</id>
     <content type="html"><![CDATA[<p>久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。</p>
+
+<p>ので、octopress に切り替えようと思ってやってみた。</p>
 
 <ul>
 <li>octopressインストール</li>
@@ -83,9 +85,11 @@ origin git@github.com:misogi/misogi.github.com.git (fetch)
 origin git@github.com:misogi/misogi.github.com.git (push)
 </code></p>
 
-<p>ブランチも2つになります。
-が、ルートディレクトリが source ブランチ、_deploy ディレクトリが master となります。
-不思議な運用に見えますが、よくあるのでしょうか。</p>
+<p>ブランチも2つになります。</p>
+
+<p>が、ルートディレクトリが source ブランチ、_deploy ディレクトリが master となります。</p>
+
+<p>不思議な運用に見えますが、よくあるのでしょうか。</p>
 
 <ul>
 <li>ブログを書いてデプロイ</li>
@@ -96,10 +100,13 @@ origin git@github.com:misogi/misogi.github.com.git (push)
 % rake new_post
 </code></p>
 
-<p>で、 source/<strong>posts 以下に新しいポストができる。
-jekyll-bootstrap だと、 </strong>posts 以下だったので、なんとか移植せねばならない。
-jekyll-bootstrapを元にした今までのバージョンがあるため、どうしたものか。
-octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した。</p>
+<p>で、 source/_posts 以下に新しいポストができる。</p>
+
+<p>jekyll-bootstrap だと、 _posts 以下だったので、なんとか移植せねばならない。</p>
+
+<p>jekyll-bootstrapを元にした今までのバージョンがあるため、どうしたものか。</p>
+
+<p>octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した。</p>
 
 <p><code>
 % rake generate
