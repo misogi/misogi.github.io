@@ -186,10 +186,10 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>% rake new_post</span></code></pre></td></tr></table></div></figure>
 
 
-<p>で、 source/<em>posts 以下に新しいポストができる。
-jekyll-bootstrap だと、 </em>posts 以下だったので、なんとか移植せねばならない。
-今までのバージョンがあるため、どうしたものか。
-octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した方が早かったかもしれない。</p>
+<p>で、 source/<strong>posts 以下に新しいポストができる。
+jekyll-bootstrap だと、 </strong>posts 以下だったので、なんとか移植せねばならない。
+jekyll-bootstrapを元にした今までのバージョンがあるため、どうしたものか。
+octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -199,7 +199,14 @@ octopress にまつわるファイルを今までのリポジトリに突っ込�
 
 <p>generate で public ディレクトリ以下のHTMLファイルを再構築し、
 deploy で master ブランチをpushする。
-それらをいっぺんにやる gen_deploy</p>
+それらをいっぺんにやる gen_deploy というrakeタスクもある。</p>
+
+<p>で、最後に source ブランチを忘れずに push しましょう。
+今後忘れそう・・</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% git push origin source</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
