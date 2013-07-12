@@ -1,101 +1,24 @@
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-  
-  <meta name="description" content="久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。 ので、octopress に切り替えようと思ってやってみた。 octopressインストール http://octopress.org/docs/setup/ 1
-2
-% git clone git &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://misogi.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:misogi.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://misogi.github.io/atom.xml" rel="self"/>
+  <link href="http://misogi.github.io/"/>
+  <updated>2013-07-10T17:35:00+09:00</updated>
+  <id>http://misogi.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/">My Blog Migrate From Jekyll-bootstrap to Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2013-07-10T16:12:00+09:00" pubdate data-updated="true">Jul 10<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。</p>
+  <entry>
+    <title type="html"><![CDATA[My blog migrate from jekyll-bootstrap to octopress]]></title>
+    <link href="http://misogi.github.io/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/"/>
+    <updated>2013-07-10T16:12:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress</id>
+    <content type="html"><![CDATA[<p>久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。</p>
 
 <p>ので、octopress に切り替えようと思ってやってみた。</p>
 
@@ -213,42 +136,15 @@ deploy で master ブランチをpushする。
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>% git push origin source</span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/20/ubuntu1210/">デスクトップPCに Ubuntu 12.10 インストール</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-20T00:00:00+09:00" pubdate data-updated="true">Oct 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>目標</h2>
+  <entry>
+    <title type="html"><![CDATA[デスクトップPCに Ubuntu 12.10 インストール]]></title>
+    <link href="http://misogi.github.io/blog/2012/10/20/ubuntu1210/"/>
+    <updated>2012-10-20T00:00:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2012/10/20/ubuntu1210</id>
+    <content type="html"><![CDATA[<h2>目標</h2>
 
 <p>Ubuntu 12.10 をデスクトップPCにインストールする.</p>
 
@@ -307,42 +203,15 @@ deploy で master ブランチをpushする。
 
 <p><a href="http://www.technoreply.com/how-to-install-sublime-text-2-on-ubuntu-12-04-unity/">How to install Sublime Text 2 on Ubuntu 12.04 (Unity) | Technoreply</a>
 を参考に、sublime textをUnityのメニューに突っ込む</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/16/new-post/">Install Fedora 18 and Ruby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-16T00:00:00+09:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+  <entry>
+    <title type="html"><![CDATA[Install fedora 18 and ruby]]></title>
+    <link href="http://misogi.github.io/blog/2012/10/16/new-post/"/>
+    <updated>2012-10-16T00:00:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2012/10/16/new-post</id>
+    <content type="html"><![CDATA[<p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
 
 <h2>Install NVidia Driver</h2>
 
@@ -414,42 +283,15 @@ git config --global color.ui true
 <pre><code>sudo yum install ruby ruby-devel
 gem install rake jekyll
 </code></pre>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/13/cannot-find-lz-on-gem-install/">&#8220;Cannot Find -lz&#8221; on Gem Install</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-13T00:00:00+09:00" pubdate data-updated="true">Oct 13<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+  <entry>
+    <title type="html"><![CDATA[ "cannot find -lz" on gem install]]></title>
+    <link href="http://misogi.github.io/blog/2012/10/13/cannot-find-lz-on-gem-install/"/>
+    <updated>2012-10-13T00:00:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2012/10/13/cannot-find-lz-on-gem-install</id>
+    <content type="html"><![CDATA[<p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
 
 <p>kyotocabinet-ruby のようなgemファイルインストール時に</p>
 
@@ -475,42 +317,15 @@ zilbのライブラリがないようなので</p>
 
 <pre><code>sudo aptitude install zlib1g-dev
 </code></pre>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/12/groonga-mecab/">Groonga、Mecabインストール</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-12T00:00:00+09:00" pubdate data-updated="true">Oct 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+  <entry>
+    <title type="html"><![CDATA[Groonga、Mecabインストール]]></title>
+    <link href="http://misogi.github.io/blog/2012/10/12/groonga-mecab/"/>
+    <updated>2012-10-12T00:00:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2012/10/12/groonga-mecab</id>
+    <content type="html"><![CDATA[<p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
 
 <ul>
 <li>インストール</li>
@@ -578,42 +393,15 @@ select --table Terms
 テーブルを検索
 select --table Site --query title:@特徴
 </code></pre>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/10/new-post/">Github Pages + Jekyll でブログを作ろう</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-10T00:00:00+09:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+  <entry>
+    <title type="html"><![CDATA[github pages + Jekyll でブログを作ろう]]></title>
+    <link href="http://misogi.github.io/blog/2012/08/10/new-post/"/>
+    <updated>2012-08-10T00:00:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2012/08/10/new-post</id>
+    <content type="html"><![CDATA[<p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
 
 <h2>Jekyll?</h2>
 
@@ -675,120 +463,16 @@ $ git push origin master
 <p>この手順なら、既存のファイルを上書きすることもありませんし、テンプレートになってるので編集が簡単です。</p>
 
 <p>posts 以下に、YYYY-MM-DD-title.md というファイルができるので、それを編集して、記事の内容を書きます。</p>
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[ブログはじめてみる]]></title>
+    <link href="http://misogi.github.io/blog/2012/08/06/birth-blog/"/>
+    <updated>2012-08-06T00:00:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2012/08/06/birth-blog</id>
+    <content type="html"><![CDATA[<p>さくらにブログをセットアップするのがじゃまくさくなったのでこちらに</p>
+]]></content>
+  </entry>
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/06/birth-blog/">ブログはじめてみる</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-06T00:00:00+09:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>さくらにブログをセットアップするのがじゃまくさくなったのでこちらに</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/">My Blog Migrate From Jekyll-bootstrap to Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/20/ubuntu1210/">デスクトップPCに Ubuntu 12.10 インストール</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/16/new-post/">Install Fedora 18 and Ruby</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/13/cannot-find-lz-on-gem-install/">&#8220;Cannot Find -lz&#8221; on Gem Install</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/12/groonga-mecab/">Groonga、Mecabインストール</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

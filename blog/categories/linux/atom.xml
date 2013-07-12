@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | My Octopress Blog]]></title>
+  <link href="http://misogi.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://misogi.github.io/"/>
+  <updated>2013-07-10T17:35:00+09:00</updated>
+  <id>http://misogi.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[デスクトップPCに Ubuntu 12.10 インストール]]></title>
+    <link href="http://misogi.github.io/blog/2012/10/20/ubuntu1210/"/>
+    <updated>2012-10-20T00:00:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2012/10/20/ubuntu1210</id>
+    <content type="html"><![CDATA[<h2>目標</h2>
+
+<p>Ubuntu 12.10 をデスクトップPCにインストールする.</p>
+
+<p>windowsとのデュアルブートとする</p>
+
+<p>Geforce 560 Ti が入っているので nvidia のドライバは入れたい</p>
+
+<ul>
+<li>hda win7</li>
+<li>hdc ubuntu
+
+<ul>
+<li>hdc1 /</li>
+<li>hdc2 swap</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>インストーラ</h2>
+
+<p>インストールの種類</p>
+
+<ul>
+<li><p>windows7といっしょにインストール
+論外</p></li>
+<li><p>windowsと別にインストール
+これをやったが、windowsと同じディスクしか選べない</p></li>
+<li><p>マニュアル
+  で、これ</p></li>
+</ul>
+
+
+<p>hdc にパーティション作成するのだが、ここで毎回落ちる。ファック</p>
+
+<p>なので、LiveCDでお試し起動し、gpartdであらかじめ hdc1,hdc2 を作成、ほいでインストール</p>
+
+<h2>nvidiaドライバインストール</h2>
+
+<ol>
+<li><p>システム設定 &ndash;> ソフトウェアソース &ndash;> 追加のドライバーから nvidia-current を選ぶ
+が、Unityが出なくなった。死ね。</p></li>
+<li><p><a href="http://www.techlw.com/2012/08/install-nvidia-unix-driver-30432-on.html">Install Nvidia Unix Driver 304.32 On Ubuntu 12.10/12.04/Linux Mint 13 ~ Technology Linux and Windows</a> を試す。が、解像度640になった死ね。</p></li>
+<li><p><a href="http://askubuntu.com/questions/202677/nvidia-driver-doesnt-work-in-12-10">xorg &ndash; Nvidia driver doesn&rsquo;t work in 12.10 &ndash; Ask Ubuntu</a> いわく、linux-headers と linux-source いれろとのことなので入れる。無事起動。</p></li>
+</ol>
+
+
+<h2>ほかソフトウェアインストール</h2>
+
+<pre><code>sudo apt-get install aptitude fonts-inconsolata ttf-inconsolata git terminator curl zsh
+</code></pre>
+
+<p>apt-get で ruby 入れると 1.9.1 ちゃんが入るので rvm</p>
+
+<p><a href="https://rvm.io/rvm/install/">rvm</a></p>
+
+<p><a href="http://www.technoreply.com/how-to-install-sublime-text-2-on-ubuntu-12-04-unity/">How to install Sublime Text 2 on Ubuntu 12.04 (Unity) | Technoreply</a>
+を参考に、sublime textをUnityのメニューに突っ込む</p>
+]]></content>
+  </entry>
+  
+</feed>
