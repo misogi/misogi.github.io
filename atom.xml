@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://misogi.github.io/atom.xml" rel="self"/>
   <link href="http://misogi.github.io/"/>
-  <updated>2013-07-10T17:35:00+09:00</updated>
+  <updated>2013-07-12T11:36:50+09:00</updated>
   <id>http://misogi.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[convert to git from hg]]></title>
+    <link href="http://misogi.github.io/blog/2013/07/12/convert-to-git-from-hg/"/>
+    <updated>2013-07-12T10:52:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2013/07/12/convert-to-git-from-hg</id>
+    <content type="html"><![CDATA[<p>Mercurial + bitbucket でホストしている趣味のプロジェクトがいくつかあるのですが、全部 github でやれば良いよねってことで、コンバートできるかぐぐってみました。</p>
+
+<p>Convert Mercurial project to Git &ndash; Stack Overflow <a href="http://stackoverflow.com/questions/16037787/convert-mercurial-project-to-git">http://stackoverflow.com/questions/16037787/convert-mercurial-project-to-git</a></p>
+
+<blockquote><ol type="a">
+<li><p>mercurial のプロジェクトを git に移行したい。コミット履歴もそっくりそのまま移行したい。
+hg 関連のファイルを消して、 git init して、git add したけどコレじゃ履歴が引き継がれない。
+解決策ない？</p></li>
+<li><p>fast-export 使え</p></li>
+</ol>
+</blockquote>
+
+<h1>hg インストール</h1>
+
+<p>作業は、hgの入っていないLinuxマシンにて行う。(fedora-19)</p>
+
+<p>python がなければ必要かも。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo yum install hg</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>リポジトリをとってくる</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hg clone ssh@hg@bitbucket.org/USERNAME/PROJECT hg_repo</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>fast-export をとってくる</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://repo.or.cz/fast-export.git</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>新しいリポジトリを作り、hg からインポート</h1>
+
+<p>ローカルは</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init git_repo
+</span><span class='line'>cd git_repo
+</span><span class='line'>/path/to/fast-export/hg-fast-export.sh -r /path/to/hg_repo
+</span><span class='line'>git checkout HEAD</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>リモートにリポジトリを作り、マージして push</h1>
+
+<p>リモートは github から create repository して</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add origin git@github.com:USERNAME/git_repo.git
+</span><span class='line'>git fetch
+</span><span class='line'>git merge origin/master
+</span><span class='line'>git status # if you feel uneasy
+</span><span class='line'>git push origin master</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My blog migrate from jekyll-bootstrap to octopress]]></title>
