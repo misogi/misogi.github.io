@@ -40,12 +40,15 @@ JSMML.swfurl = './JSMML.swf';
 JSMML.onLoad = function() {
 	/* Initialize JSMML */
 	mml = new JSMML();
-	//$("#debug").html('load mml');
+	if (mml === undefined) {
+    $('#play').attr('disabled', true)
+	}
 }
 
 $(function(){
 	generateTab();
 });
+
 $(function(){
 	$("#root").change(function(){
 		generateTab();
@@ -74,9 +77,14 @@ $(function(){
 		generateTab();
 	});
 	
-    $("#play").click(function(){ 
+    $("#play").click(function(){
         mml.play(strmml);
     }); 
+    
+    if ($.socialbutton === undefined) {
+    	return;
+    }
+    
     $("#button_mixi").socialbutton('mixi_check', {
         key: 'de2d15e5e48e93f32f74fec731deb56defb7916a'
     });
@@ -126,6 +134,7 @@ function generateTab(){
 	$("#scaleresult").html( genScale() );
 	//$("#debug").html( "3:" +  sel_3th.val() );
 }
+
 function genDiatonic(){
    	var sel = $("#dia_root");
    	var sel_c = $("#dia_chord");
@@ -151,7 +160,8 @@ function selectDiatonic(){
 	$("#5th").val( dia_5th[ i ] );
 	$("#7th").val( dia_7th[ i ] );
 }
-function noteOn(i,note){
+
+function noteOn(i, note){
 	if(note == 'root'){
 		$(keyboard_name[i]).attr({
 				src:"./keyboard_note_red.gif"
@@ -180,12 +190,13 @@ function genScale(){
    		}
    		str = str.split( tabreplace[ind] ).join( rep );
    	}
+
    	scalename = name_root[ind_root] + " " + name_scale[ind_scale];
 	$("#scalename").html(scalename);
    	return str;
 }
 
-function genMmlCode(root,n3th,n5th,n7th){
+function genMmlCode(root, n3th, n5th, n7th){
 	var str = "";
 	str = "<";
 	s1 = mmlNote(root,0);
@@ -197,7 +208,7 @@ function genMmlCode(root,n3th,n5th,n7th){
 	return str;
 }
 
-function mmlNote(root,note){
+function mmlNote(root, note){
 	var str = "";
 	var i = root + note ;
 	if(note == 12){
@@ -209,5 +220,6 @@ function mmlNote(root,note){
 	}else{
 		str = mml_note[i];
 	}
+
 	return str;
 }
