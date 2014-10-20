@@ -1,0 +1,72 @@
+﻿
+#body_chord h2,#body_scale h2,#body_dia h2,#body_tab h2{
+	background-color: #DDDDEE;
+	border: solid 1px #AAAAAA;
+	font-size: 13px;
+	padding: 5px 10px 5px 7px;
+	margin: 0px 0px 0px 0px;
+	clear: both;
+}
+
+#body_chord,#body_scale,#body_dia,#body_tab{
+	border: solid 1px #AAAAAA;
+	padding: 5px 10px 5px 7px;
+	margin: 5px 5px 5px 5px;
+}
+
+#container{
+	margin:0px auto;
+	background-color: #FFFFFF;
+	width:850px;
+}
+
+#body_chord{
+	float:left;
+	width:300px;
+}
+#body_dia{
+	float:left;
+	width:250px;
+}
+#body_tab{
+	clear:both;
+	width:96%;
+}
+#chordresult,#scaleresult{
+	background-color: #EFECE4;
+	font-size: 13px;
+	font-family: 'Osaka-等幅','ＭＳ ゴシック',monospace;
+	float:left;
+}
+
+#tabguide{
+	font-size: 13px;
+	font-family: 'Osaka-等幅','ＭＳ ゴシック',monospace;
+}
+#keyboard{
+	float:left;
+}
+#dummy,#scalename{
+	clear:both;
+}
+
+body{
+	background-color: #B0B0D0;
+}
+
+#root .note_black,#scale_root .note_black{
+	background-color: #E0E0E0;
+}
+
+#chordresult .tab_on , #scaleresult .tab_on {
+	background: #CCCCFF;
+}
+
+#chordresult .tab_on_root , #scaleresult .tab_on_root{
+	background: #FFCCCC;
+}
+#chordname,#scalename {
+	font-family: 'メイリオ';
+	font-weight: bold;
+	font-size: 22px;
+}

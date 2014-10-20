@@ -1,0 +1,130 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>みコード ギターのコードとスケール確認アプリ</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.socialbutton.js"></script>
+<script type="text/javascript" src="./JSMML.min.js"></script>
+<script type="text/javascript" src="./main.js"></script>
+<link rel='stylesheet' href='./main.css' type='text/css' /> 
+</head>
+
+<body>
+<div id="container">
+<div id="body_chord">
+<h2>コードをノートから指定</h2>
+<select size="12" id="root">
+<option value="11">B</option>
+<option value="10" class="note_black">Bb</option>
+<option value="9">A</option>
+<option value="8" class="note_black">Ab</option>
+<option value="7">G</option>
+<option value="6" class="note_black">Gb</option>
+<option value="5">F</option>
+<option value="4">E</option>
+<option value="3" class="note_black">Eb</option>
+<option value="2">D</option>
+<option value="1" class="note_black">Db</option>
+<option value="0" selected>C</option>
+</select>
+<select size="12" id="3th">
+<option value="4" selected>major</option>
+<option value="3">minor</option>
+<option value="5">sus4</option>
+</select>
+<select size="12"  id="5th">
+<option value="7" selected>-</option>
+<option value="6">b5</option>
+<option value="8">#5</option>
+</select>
+<select size="12" id="7th">
+<option value="12" selected>-</option>
+<option value="10">7th</option>
+<option value="11">△7th</option>
+<option value="9">6th</option>
+</select>
+</div>
+<div id="body_dia">
+<h2>ダイアトニックコードから指定</h2>
+<select size="12" id="dia_root">
+<option value="1">Db/Bbm(bbbbb)</option>
+<option value="8">Ab/Fm (bbbb)</option>
+<option value="3">Eb/Cm (bbb)</option>
+<option value="10">Bb/Gm (bb)</option>
+<option value="5">F /Dm (b)</option>
+<option value="0">C /Am</option>
+<option value="7">G /Em (#)</option>
+<option value="2">D /Bm (##)</option>
+<option value="9">A /F#m(###)</option>
+<option value="4">E /C#m(####)</option>
+<option value="11">B /G#m(#####)</option>
+<option value="6">F#/D#m(######)</option>
+</select>
+<select size="12" id="dia_chord">
+</select>
+</div>
+<div id="body_tab">
+<h2>実行結果</h2>
+	<div id="chordname"></div>
+	<div id="keyboard">
+		<img src='./keyboard_wh.gif' height='10'><image height='10' class="key12"><br>
+		<img src='./keyboard_br.gif' height='10'><image height='10' class="key11"><br>
+		<img src='./keyboard_wh.gif' height='10'><image height='10' class="key10"><br>
+		<img src='./keyboard_br.gif' height='10'><image height='10' class="key09"><br>
+		<img src='./keyboard_wh.gif' height='10'><image height='10' class="key08"><br>
+		<img src='./keyboard_br.gif' height='10'><image height='10' class="key07"><br>
+		<img src='./keyboard_wh.gif' height='10'><image height='10' class="key06"><br>
+		<img src='./keyboard_wh.gif' height='10'><image height='10' class="key05"><br>
+		<img src='./keyboard_br.gif' height='10'><image height='10' class="key04"><br>
+		<img src='./keyboard_wh.gif' height='10'><image height='10' class="key03"><br>
+		<img src='./keyboard_br.gif' height='10'><image height='10' class="key02"><br>
+		<img src='./keyboard_wh.gif' height='10'><image height='10' class="key01"><br>
+      <input type='button' id='play' value='play'> 
+	</div>
+	<div id="chordresult"></div>
+	<div id="tabguide"></div>
+	<div id="scaleresult"></div>
+	<div id="scalename"></div>
+	<div id="dummy">
+    </div>
+</div>
+<div id="body_scale">
+<h2>スケール指定</h2>
+<select size="12" id="scale_root">
+<option value="11">B</option>
+<option value="10" class="note_black">Bb</option>
+<option value="9">A</option>
+<option value="8" class="note_black">Ab</option>
+<option value="7">G</option>
+<option value="6" class="note_black">Gb</option>
+<option value="5">F</option>
+<option value="4">E</option>
+<option value="3" class="note_black">Eb</option>
+<option value="2">D</option>
+<option value="1" class="note_black">Db</option>
+<option value="0" selected>C</option>
+</select>
+<select size="12" id="scale_scale">
+<option value="0" selected>イオニアン(メジャー)</option>
+<option value="1">ドリアン</option>
+<option value="2">フリジアン</option>
+<option value="3">リディアン</option>
+<option value="4">ミクソリディアン</option>
+<option value="5">エオリアン(マイナー)</option>
+<option value="6">ロクリアン</option>
+<option value="7">ディミニッシュ</option>
+<option value="8">ハーモニックマイナー</option>
+<option value="9">メジャーペンタ</option>
+<option value="10">マイナーペンタ</option>
+</select>
+</div>
+<div id="debug">todo:7弦、dim<hr>created by <a href="http://twitter.com/#!/m1sogi">@m1sogi</a><hr></div>
+<div id="button_mixi"></div>
+<div id="button_hatena"></div>
+<div id="button_facebook"></div>
+<div id="button_twitter"></div>
+</div>
+</body>
+</html>
