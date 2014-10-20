@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<!-- saved from url=(0014)about:internet -->
+<valuecommerce   ptnOid="2993176" url="http://misogi.info/works/ixacalc/" />
+<head>
+<title>戦国IXA 攻撃力・防御力計算機</title>
+<style type="text/css">
+html, body {
+	height: 100%;
+	overflow: auto;
+}
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #333;
+	background-image: url(../back.png);
+	background-repeat: no-repeat;
+}
+#silverlightControlHost {
+	padding: 15;
+	background-color: #000;
+	border: 10;
+	border-color: #F03;
+	width: 950px;
+	height: 650px;
+}
+body, td, th {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #EEE;
+}
+.ads {
+	float: right;
+	width: 200px;
+	clear: right;
+}
+.header {
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.helpbody {
+	float: left;
+	width: 600px;
+	padding-left: 20px;
+}
+.docheader {
+	font-size: large;
+	font-weight: bold;
+	float: none;
+	line-height: 1em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.bodytext {
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-bottom: 40px;
+}
+a:link {
+	color: #F09;
+}
+a:visited {
+	color: #F03;
+}
+a:hover {
+	color: #F06;
+}
+a:active {
+	color: #F06;
+}
+.footer {
+	font-size: small;
+	background-color: #000;
+	float: none;
+	clear: both;
+}
+.outergrid {
+	width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.centerbox {
+	margin: auto;
+}
+</style>
+<script type="text/javascript">
+        function onSilverlightError(sender, args) {
+            var appSource = "";
+            if (sender != null && sender != 0) {
+              appSource = sender.getHost().Source;
+            }
+            
+            var errorType = args.ErrorType;
+            var iErrorCode = args.ErrorCode;
+
+            if (errorType == "ImageError" || errorType == "MediaError") {
+              return;
+            }
+
+            var errMsg = "Silverlight アプリケーションのハンドルされないエラー " +  appSource + "\n" ;
+
+            errMsg += "コード: "+ iErrorCode + "    \n";
+            errMsg += "カテゴリ: " + errorType + "       \n";
+            errMsg += "メッセージ: " + args.ErrorMessage + "     \n";
+
+            if (errorType == "ParserError") {
+                errMsg += "ファイル: " + args.xamlFile + "     \n";
+                errMsg += "行: " + args.lineNumber + "     \n";
+                errMsg += "位置: " + args.charPosition + "     \n";
+            }
+            else if (errorType == "RuntimeError") {           
+                if (args.lineNumber != 0) {
+                    errMsg += "行: " + args.lineNumber + "     \n";
+                    errMsg += "位置: " +  args.charPosition + "     \n";
+                }
+                errMsg += "メソッド名: " + args.methodName + "     \n";
+            }
+
+            throw new Error(errMsg);
+        }
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20067754-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="outergrid">
+  <div class="header">
+    <div align="center"><img src="images/ixacalctitle.png" width="669" height="44" alt="戦国IXA 計算機" /> </div>
+  </div>
+  <div>
+    <div id="silverlightControlHost"> 　<br />
+      <div class="centerbox" align="center">
+        <form id="form1" style="height:600" runat="server">
+          <object  data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="900" height="600" align="middle">
+            <param name="source" value="IxaCalc.xap?ver=002"/>
+            <param name="onError" value="onSilverlightError" />
+            <param name="background" value="white" />
+            <param name="minRuntimeVersion" value="5.0.61118.0" />
+            <param name="autoUpgrade" value="true" />
+            <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=5.0.61118.0" style="text-decoration:none"> <img src="http://go.microsoft.com/fwlink/?LinkId=161376" alt="Microsoft Silverlight の取得" style="border-style:none" align="middle"/> </a>
+          </object>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="helpbody">
+    <iframe frameborder="0" allowtransparency="true" height="60" width="468" marginheight="0" scrolling="no" src="http://ad.jp.ap.valuecommerce.com/servlet/htmlbanner?sid=2993176&pid=881245602" marginwidth="0"><script language="javascript" src="http://ad.jp.ap.valuecommerce.com/servlet/jsbanner?sid=2993176&pid=881245602"></script>
+    <noscript>
+    <a href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2993176&pid=881245602" target="_blank" ><img src="http://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2993176&pid=881245602" height="60" width="468" border="0"></a>
+    </noscript>
+    </iframe>
+    <div class="docheader">コレは何ですか</div>
+    <div class="bodytext"> ブラウザゲーム <a href="http://sengokuixa.jp/lp/" target="_blank">戦国IXA</a>の計算機です </div>
+    <div class="docheader"> 何に使いますか </div>
+    <div class="bodytext"> 戦国IXAのゲーム上において、部隊の攻撃力および防御力を計算することができます。<br />
+    </div>
+    <div class="docheader"> 何かインストールする必要がありますか？ </div>
+    <div class="bodytext"> Silverlight 5 というブラウザのランタイムが必要です。<br />
+      windows及びMacにて動作するはずです。<br />
+    </div>
+    <div class="docheader"> どう使いますか？<br />
+    </div>
+    <div class="bodytext">左のレアリティアイコンから武将一覧を絞り込みます<br />
+      武将を左クリックするとデッキに入ります<br />
+      部隊に入った武将をクリックすると部隊から外します<br />
+      兵種アイコンから部隊が使う兵種を選択します<br />
+      右下の攻撃および防御力を見てニヤニヤします<br />
+    </div>
+    <div class="docheader"> これはいけないツールですか？ </div>
+    <div class="bodytext"> いけなくないです。<br />
+      このツールでは、ゲーム本編を操作したりすることはできません。<br />
+      ゲームサーバーに接続は全く行いません。<br />
+      ゲーム本編で利用するIDなどは必要ありません。 </div>
+    <div class="docheader"> データが間違ってるっぽいのだけど？<br />
+    </div>
+    <div class="bodytext"> wiki を見てデータを書き写していますが、間違っているかもしれません。<br />
+    </div>
+    <div class="docheader"> 作った人<br />
+    </div>
+    <div class="bodytext"> プログラムなど : <a href="https://twitter.com/m1sogi" target="_blank">@m1sogi</a><br />
+      使用しているデータ : <a href="http://www.ixawiki.com/" target="_blank">戦国IXA wiki</a><br />
+    </div>
+  </div>
+  <div class="ads">
+    <iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=monophilia-22&o=9&p=11&l=ur1&category=special_deal&f=ifr" width="120" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+    <br />
+    <iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=monophilia-22&o=9&p=11&l=ur1&category=software&banner=0DJ556MFT4X4T51QCN82&f=ifr" width="120" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+    <br />
+    <iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=monophilia-22&o=9&p=8&l=as1&asins=4047280402&IS1=1&ref=qf_sp_asin_til&fc1=000000&lt1=_blank&m=amazon&lc1=0000FF&bc1=FFFFFF&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+    <br />
+    <iframe src="http://rcm-jp.amazon.co.jp/e/cm?lt1=_blank&bc1=FFFFFF&IS1=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=monophilia-22&o=9&p=8&l=as1&m=amazon&f=ifr&ref=qf_sp_asin_til&asins=B005Y2X9A2" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top"><div style="border:1px none;margin:0px;padding:6px 0px;width:80px;text-align:center;float:left"><a href="http://hb.afl.rakuten.co.jp/hgc/0fd6eed8.05bdf815.0fd6eed9.5c00d2d2/?pc=http%3a%2f%2fitem.rakuten.co.jp%2fguruguru2%2fsqex-10270%2f%3fscid%3daf_ich_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fguruguru2%2fi%2f10859180%2f" target="_blank"><img src="http://hbb.afl.rakuten.co.jp/hgb/?pc=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fguruguru2%2fcabinet%2f426%2fsqex-10270.jpg%3f_ex%3d64x64&amp;m=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fguruguru2%2fcabinet%2f426%2fsqex-10270.jpg%3f_ex%3d40x40" alt="《送料無料》（ゲーム・ミュージック） ..." border="0" style="margin:0px;padding:0px"></a>
+            <p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px"><a href="http://hb.afl.rakuten.co.jp/hgc/0fd6eed8.05bdf815.0fd6eed9.5c00d2d2/?pc=http%3a%2f%2fitem.rakuten.co.jp%2fguruguru2%2fsqex-10270%2f%3fscid%3daf_ich_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fguruguru2%2fi%2f10859180%2f" target="_blank">《送料無料》（ゲーム・ミュージック） ...</a><br>
+              <span style="">価格：3,000円（税込、送料込）</span><br>
+            </p>
+          </div></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer"> 利用している画像の著作権表記<br />
+    Copyright © 2010, 2011 SQUARE ENIX CO., LTD. All Rights Reserved. </div>
+</div>
+</body>
+</html>
