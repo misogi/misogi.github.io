@@ -77,22 +77,22 @@ $(function(){
 		generateTab();
 	});
 	
-    $("#play").click(function(){
-        mml.play(strmml);
-    }); 
-    
-    if ($.socialbutton === undefined) {
-    	return;
-    }
-    
-    $("#button_mixi").socialbutton('mixi_check', {
-        key: 'de2d15e5e48e93f32f74fec731deb56defb7916a'
-    });
-    $('#button_hatena').socialbutton('hatena', {
-        button: '/img/hatena_append.gif'
-    });
-    $('#button_twitter').socialbutton('twitter');
-    $('#button_facebook').socialbutton('facebook_like');
+  $("#play").click(function(){
+      mml.play(strmml);
+  }); 
+  
+  if ($.socialbutton === undefined) {
+  	return;
+  }
+  
+  $("#button_mixi").socialbutton('mixi_check', {
+      key: 'de2d15e5e48e93f32f74fec731deb56defb7916a'
+  });
+  $('#button_hatena').socialbutton('hatena', {
+      button: '/img/hatena_append.gif'
+  });
+  $('#button_twitter').socialbutton('twitter');
+  $('#button_facebook').socialbutton('facebook_like');
 });
 
 function generateTab(){
@@ -153,10 +153,10 @@ function genDiatonic(){
 }
 
 function selectDiatonic(){
-   	var sel = $("#dia_chord");
-   	var sel_root = $("#dia_root");
-   	var i = eval( sel.val() );
-   	var ind = ( i + eval( sel_root.val() ) ) % 12;
+ 	var sel = $("#dia_chord");
+ 	var sel_root = $("#dia_root");
+ 	var i = eval( sel.val() );
+ 	var ind = ( i + eval( sel_root.val() ) ) % 12;
 	$("#root").val( ind );
 	$("#3th").val( dia_3th[ i ] );
 	$("#5th").val( dia_5th[ i ] );
