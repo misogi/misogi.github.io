@@ -128,10 +128,12 @@ function generateTab(){
  	strmml = genMmlCode( ind_root , ind_3th , ind_5th , ind_7th );
 	//$("#debug").html( genMmlCode( ind_root , ind_3th , ind_5th , ind_7th ) );
  	
-	$("#chordname").html(chordname + tone_str);
+  var chord_str = "コード: " + chordname + tone_str;
+
+	$("#chordname").html(chord_str);
 	$("#chordresult").html(str);
-	$("#tabguide").html( tabnum);
-	$("#scaleresult").html( genScale() );
+	$("#tabguide").html(tabnum);
+	$("#scaleresult").html(genScale());
 	//$("#debug").html( "3:" +  sel_3th.val() );
 }
 
@@ -191,8 +193,8 @@ function genScale(){
    		str = str.split( tabreplace[ind] ).join( rep );
    	}
 
-   	scalename = name_root[ind_root] + " " + name_scale[ind_scale];
-	$("#scalename").html(scalename);
+   	scalename = "スケール: " + name_root[ind_root] + " " + name_scale[ind_scale];
+  	$("#scalename").html(scalename);
    	return str;
 }
 
