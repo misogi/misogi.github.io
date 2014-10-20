@@ -1,8 +1,8 @@
 ﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="IxaCalc" EntryPointType="IxaCalc.App" RuntimeVersion="5.0.61118.0">
   <Deployment.Parts>
     <AssemblyPart x:Name="IxaCalc" Source="IxaCalc.dll" />
-    <AssemblyPart x:Name="GalaSoft.MvvmLight.Extras.SL5" Source="GalaSoft.MvvmLight.Extras.SL5.dll" />
-    <AssemblyPart x:Name="GalaSoft.MvvmLight.SL5" Source="GalaSoft.MvvmLight.SL5.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight" Source="GalaSoft.MvvmLight.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.Extras" Source="GalaSoft.MvvmLight.Extras.dll" />
     <AssemblyPart x:Name="Microsoft.Expression.Effects" Source="Microsoft.Expression.Effects.dll" />
     <AssemblyPart x:Name="Microsoft.Expression.Interactions" Source="Microsoft.Expression.Interactions.dll" />
     <AssemblyPart x:Name="Microsoft.Practices.ServiceLocation" Source="Microsoft.Practices.ServiceLocation.dll" />
