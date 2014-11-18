@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | My Octopress Blog]]></title>
+  <link href="http://misogi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://misogi.github.io/"/>
+  <updated>2014-11-18T18:40:52+09:00</updated>
+  <id>http://misogi.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My blog migrate from jekyll-bootstrap to octopress]]></title>
+    <link href="http://misogi.github.io/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/"/>
+    <updated>2013-07-10T16:12:00+09:00</updated>
+    <id>http://misogi.github.io/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress</id>
+    <content type="html"><![CDATA[<p>久しぶりにブログを更新しようと思ったら Jekyll-bootstrap が更新されていなかった。</p>
+
+<p>ので、octopress に切り替えようと思ってやってみた。</p>
+
+<ul>
+<li>octopressインストール</li>
+</ul>
+
+
+<p><a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a></p>
+
+<pre><code>% git clone git://github.com/imathis/octopress.git octopress
+% cd octopress
+</code></pre>
+
+<pre><code>% rake install
+## Copying classic theme into ./source and ./sass
+mkdir -p source
+cp -r .themes/classic/source/. source
+mkdir -p sass
+cp -r .themes/classic/sass/. sass
+mkdir -p source/_posts
+mkdir -p public
+</code></pre>
+
+<p>rake install で何か初期設定をやってくれているのでしょう。ディレクトリ作成してくれています。</p>
+
+<p>cd octopress した時点で、rvm ちゃんに怒られる。
+きっと octopress のせいではなくて、ruby 使わなくなって久しい私に rvm が怒っている。
+この件は別エントリ。</p>
+
+<p>ともあれ、 rvm でも rbenv でもバージョン指定がすでに済んでいるようである。</p>
+
+<ul>
+<li>デプロイ設定</li>
+</ul>
+
+
+<pre><code>% rake setup_github_pages
+</code></pre>
+
+<p>すると、github のリポジトリを問われる。</p>
+
+<p>私のリポジトリを答える。</p>
+
+<pre><code>Repository url: git@github.com:misogi/misogi.github.io.git
+</code></pre>
+
+<p>するとデプロイ設定までやってくれる。
+この時点で、リモートの設定とブランチの設定が書き換わります。</p>
+
+<p>リモートは2つになり、</p>
+
+<pre><code>% git remote -v
+octopress git://github.com/imathis/octopress.git (fetch)
+octopress git://github.com/imathis/octopress.git (push)
+origin git@github.com:misogi/misogi.github.com.git (fetch)
+origin git@github.com:misogi/misogi.github.com.git (push)
+</code></pre>
+
+<p>ブランチも2つになります。</p>
+
+<p>が、ルートディレクトリが source ブランチ、_deploy ディレクトリが master となります。</p>
+
+<p>不思議な運用に見えますが、よくあるのでしょうか。</p>
+
+<ul>
+<li>ブログを書いてデプロイ</li>
+</ul>
+
+
+<pre><code>% rake new_post
+</code></pre>
+
+<p>で、 source/_posts 以下に新しいポストができる。</p>
+
+<p>jekyll-bootstrap だと、 _posts 以下だったので、なんとか移植せねばならない。</p>
+
+<p>jekyll-bootstrapを元にした今までのバージョンがあるため、どうしたものか。</p>
+
+<p>octopress にまつわるファイルを今までのリポジトリに突っ込んだが、単純に github pages のリポジトリを消してやり直した。</p>
+
+<pre><code>% rake generate
+% rake deploy
+</code></pre>
+
+<p>generate で public ディレクトリ以下のHTMLファイルを再構築し、
+deploy で master ブランチをpushする。
+それらをいっぺんにやる gen_deploy というrakeタスクもある。</p>
+
+<p>で、最後に source ブランチを忘れずに push しましょう。
+今後忘れそう・・</p>
+
+<pre><code>% git push origin source
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

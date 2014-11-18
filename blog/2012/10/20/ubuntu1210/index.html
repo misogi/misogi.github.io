@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>デスクトップPCに Ubuntu 12.10 インストール - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://misogi.github.io/blog/2012/10/20/ubuntu1210">
+  <link href="/project/favicon.png" rel="icon">
+  <link href="/project/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/project/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/project/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/project/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:misogi.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/project/">Blog</a></li>
+  <li><a href="/project/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">デスクトップPCに Ubuntu 12.10 インストール</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-10-20T00:00:00+09:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>目標</h2>
+
+<p>Ubuntu 12.10 をデスクトップPCにインストールする.</p>
+
+<p>windowsとのデュアルブートとする</p>
+
+<p>Geforce 560 Ti が入っているので nvidia のドライバは入れたい</p>
+
+<ul>
+<li>hda win7</li>
+<li>hdc ubuntu
+
+<ul>
+<li>hdc1 /</li>
+<li>hdc2 swap</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>インストーラ</h2>
+
+<p>インストールの種類</p>
+
+<ul>
+<li><p>windows7といっしょにインストール
+論外</p></li>
+<li><p>windowsと別にインストール
+これをやったが、windowsと同じディスクしか選べない</p></li>
+<li><p>マニュアル
+  で、これ</p></li>
+</ul>
+
+
+<p>hdc にパーティション作成するのだが、ここで毎回落ちる。ファック</p>
+
+<p>なので、LiveCDでお試し起動し、gpartdであらかじめ hdc1,hdc2 を作成、ほいでインストール</p>
+
+<h2>nvidiaドライバインストール</h2>
+
+<ol>
+<li><p>システム設定 -> ソフトウェアソース -> 追加のドライバーから nvidia-current を選ぶ
+が、Unityが出なくなった。死ね。</p></li>
+<li><p><a href="http://www.techlw.com/2012/08/install-nvidia-unix-driver-30432-on.html">Install Nvidia Unix Driver 304.32 On Ubuntu 12.10/12.04/Linux Mint 13 ~ Technology Linux and Windows</a> を試す。が、解像度640になった死ね。</p></li>
+<li><p><a href="http://askubuntu.com/questions/202677/nvidia-driver-doesnt-work-in-12-10">xorg - Nvidia driver doesn&rsquo;t work in 12.10 - Ask Ubuntu</a> いわく、linux-headers と linux-source いれろとのことなので入れる。無事起動。</p></li>
+</ol>
+
+
+<h2>ほかソフトウェアインストール</h2>
+
+<pre><code>sudo apt-get install aptitude fonts-inconsolata ttf-inconsolata git terminator curl zsh
+</code></pre>
+
+<p>apt-get で ruby 入れると 1.9.1 ちゃんが入るので rvm</p>
+
+<p><a href="https://rvm.io/rvm/install/">rvm</a></p>
+
+<p><a href="http://www.technoreply.com/how-to-install-sublime-text-2-on-ubuntu-12-04-unity/">How to install Sublime Text 2 on Ubuntu 12.04 (Unity) | Technoreply</a>
+を参考に、sublime textをUnityのメニューに突っ込む</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2012-10-20T00:00:00+09:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/project/blog/categories/linux/'>linux</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://misogi.github.io/blog/2012/10/20/ubuntu1210/" data-via="" data-counturl="http://misogi.github.io/blog/2012/10/20/ubuntu1210/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/project/blog/2012/10/16/new-post/" title="Previous Post: Install fedora 18 and ruby">&laquo; Install fedora 18 and ruby</a>
+      
+      
+        <a class="basic-alignment right" href="/project/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/" title="Next Post: My blog migrate from jekyll-bootstrap to octopress">My blog migrate from jekyll-bootstrap to octopress &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/project/blog/2013/07/12/convert-to-git-from-hg/">Convert to Git From Hg</a>
+      </li>
+    
+      <li class="post">
+        <a href="/project/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/">My Blog Migrate From Jekyll-bootstrap to Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/project/blog/2012/10/20/ubuntu1210/">デスクトップPCに Ubuntu 12.10 インストール</a>
+      </li>
+    
+      <li class="post">
+        <a href="/project/blog/2012/10/16/new-post/">Install Fedora 18 and Ruby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/project/blog/2012/10/13/cannot-find-lz-on-gem-install/">&#8220;Cannot Find -lz&#8221; on Gem Install</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
