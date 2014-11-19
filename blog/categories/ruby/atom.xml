@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ruby | ひとりみそぎ]]></title>
+  <title><![CDATA[Category: Ruby | ひとりみそぎ]]></title>
   <link href="http://misogi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://misogi.github.io/"/>
-  <updated>2014-11-19T09:44:14+09:00</updated>
+  <updated>2014-11-19T10:12:41+09:00</updated>
   <id>http://misogi.github.io/</id>
   <author>
     <name><![CDATA[みそぎ]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My blog migrate from jekyll-bootstrap to octopress]]></title>
+    <title type="html"><![CDATA[My Blog Migrate From Jekyll-bootstrap to Octopress]]></title>
     <link href="http://misogi.github.io/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress/"/>
     <updated>2013-07-10T16:12:00+09:00</updated>
     <id>http://misogi.github.io/blog/2013/07/10/my-blog-update-from-jekyll-bootstrap-to-octopress</id>
