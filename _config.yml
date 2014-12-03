@@ -1,0 +1,12 @@
+# Site settings
+title: ひとりみそぎ
+email: dev@misogi.info
+description:
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://misogi.info" # the base hostname & protocol for your site
+twitter_username: m1sogi
+github_username:  misogi
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
